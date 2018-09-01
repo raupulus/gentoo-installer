@@ -1,0 +1,35 @@
+###########################################
+##             CONFIGURACIÓN             ##
+###########################################
+
+WORKSCRIPT=$PWD  ## Directorio principal del script
+USER=$(whoami)   ## Usuario que ejecuta el script
+VERSION='0.0.1'  ## Primera versión del script
+LOGERROR='/tmp/chrooterrores.log'  ## Archivo donde almacenar errores
+SYSTEMD=true
+HOSTNAME='localhost'  ## Nombre del EQUIPO
+DOMAIN='local'  ## Nombre del dominio
+USUARIO='usuario'  ## Nombre del usuario a crear
+
+BOOT='/dev/sdXX'  ## Partición BOOT de 1GB
+RAIZ='/dev/sdXX'  ## Partición Raíz de más de 10GB
+SWAP='/dev/sdXX'  ## Partición SWAP
+JAULA='/mnt/gentoo'
+HDROOT='hdX,X' ## Partición raíz / en nomenclatura hd0,1
+
+## Nombre de la partición RAIZ cifrada
+LUKSNAME='LUKSGENTOO'
+
+## Nombre del stage a descargar
+STAGE3='stage3-amd64-20180828T214505Z.tar.xz'
+RUTASTAGE3="http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/$STAGE3"
+
+STAGE3SYSTEMD='stage3-amd64-systemd-20180827.tar.bz2'
+RUTASTAGE3SYSTEMD="http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-systemd/$STAGE3SYSTEMD"
+
+KEYMAP="es"
+LOCALIZATION='es_ES.UTF-8'
+ZONE='Europe/Madrid'
+
+
+
