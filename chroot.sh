@@ -3,26 +3,28 @@
 #################################################
 
 ## Importo variables de configuración
-source "conf"
+source 'conf'
 
 ## Importo funciones auxiliares
-source "functions.sh"
+source 'functions.sh'
 
 startChroot() {
-    echo 'Preparando entorno chroot'
+    echo -e "Preparando entorno chroot"
     source /etc/profile
     export PS1="(chroot) $PS1"
 
     if [[ ! -d '/usr/portage' ]]; then
-        mkdir /usr/portage
+        mkdir '/usr/portage'
     fi
 }
 
 confRepos() {
+    echo -e "Configurando Repositorios"
     emerge-webrsync
 }
 
 portageProfile() {
+    echo -e "Seleccionando Perfil del Sistema"
     eselect profile list
     read -p "Introduce el profile elegido" inputprofile
     eselect profile set $inputprofile
@@ -31,17 +33,20 @@ portageProfile() {
 }
 
 installKernel() {
+    echo -e "Instalando Kernel con Genkernel"
     emerge gentoo-sources
     emerge genkernel
     genkernel all
 }
 
 createFstab() {
-    ## Editando FSTAB
-    #nano -w /etc/fstab
+    echo -e "Generando fstab"
+    cp aux/fstab /etc/fstab
+    ## TODO → Modificar con kernel actual
 }
 
 configRed() {
+    echo -e "Configurando Red"
     echo "$HOSTNAME" > /etc/conf.d/hostname
 
     # nano -w /etc/conf.d/net
@@ -56,6 +61,7 @@ configRed() {
 }
 
 configLocales() {
+    echo -e "Configuración de idioma, hora y localización"
     # nano -w /etc/conf.d/keymaps
     #Agregamos las siguientes líneas si nuestro teclado es en español: > KEYMAP="$KEYMAP" > SET_WINDOWKEYS="yes"
 
@@ -77,19 +83,21 @@ configLocales() {
 }
 
 configRoot() {
+    echo -e "Configurando a Root"
     ## Passwd de root
     echo 'Introduce la contraseña para root'
     passwd
 }
 
 configUser() {
+    echo -e "Creando y configurando Usuario"
     emerge app-admin/sudo
     useradd -m -G users,wheel,audio,cdrom,usb,video -s /bin/bash $USUARIO
     passwd $USUARIO
 }
 
 installGrub() {
-    ## Instalando grub
+    echo -e "Instalando y configurando GRUB"
     emerge grub
     kernel=$(ls /boot/kernel* | head -1)
     initramfs=$(/boot/initramfs* | head -1)
@@ -101,11 +109,15 @@ installGrub() {
     echo "initrd $initramfs" >> '/boot/grub/grub.conf'
 
     ## Instalar GRUB en el disco duro
-    # grep -v rootfs /proc/mounts > /etc/mtab
-    # grub-install --no-floppy /dev/sda
+    read -p '¿Instalar GRUB en MBR de /dev/sda? s/N → ' installGRUB
+    if [[ "$installGRUB" = 's' ]] || [[ "$installGRUB" = 'S' ]]; then
+        grep -v rootfs /proc/mounts > /etc/mtab
+        grub-install --no-floppy /dev/sda
+    fi
 }
 
 installSoftware() {
+    echo -e "Instalando Software Adicional"
     emerge syslog-ng
     rc-update add syslog-ng default
 
@@ -114,6 +126,12 @@ installSoftware() {
 
     emerge mlocate
     emerge net-misc/dhcpcd
+}
+
+installRepoConf() {
+    echo -e "Clonando repositorio con herramientas adicionales"
+    echo -e "El repositorio estará en /home/$USUARIO/"
+    git clone https://gitlab.com/fryntiz/debian-developer-conf
 }
 
 installChroot() {
@@ -127,4 +145,5 @@ installChroot() {
     configRoot
     configUser
     installGrub
+    installRepoConf
 }
