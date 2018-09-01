@@ -20,41 +20,48 @@
 ## proceso de instalación y configuración de GNU/Linux Gentoo
 
 ############################
-##     IMPORTACIONES      ##
+##         GLOBAL         ##
 ############################
-
-############################
-##       FUNCIONES        ##
-############################
-
-WORKSCRIPT=$PWD       ## Directorio principal del script
-USER=$(whoami)        ## Usuario que ejecuta el script
-VERSION='0.0.1'       ## Primera versión del script
+WORKSCRIPT=$PWD        ## Directorio principal del script
+USER=$(whoami)         ## Usuario que ejecuta el script
+VERSION='0.0.1'        ## Primera versión del script
 LOGERROR='/tmp/installerErrors.log'  ## Archivo donde almacenar errores
-SYSTEMD=true          ## Indica si se instalará con systemd
-HOSTNAME='localhost'  ## Nombre del EQUIPO
-DOMAIN='local'        ## Nombre del dominio
-USUARIO='usuario'     ## Nombre del usuario a crear
 
-BOOT='/dev/sdXX'      ## Partición BOOT de 1GB
-RAIZ='/dev/sdXX'      ## Partición Raíz de más de 10GB
-SWAP='/dev/sdXX'      ## Partición SWAP
-JAULA='/mnt/gentoo'
-HDROOT='hdX,X'        ## Partición raíz / en nomenclatura hd0,1
+############################
+##        USUARIO         ##
+############################
+USUARIO='usuario'      ## Nombre del usuario a crear
 
-## Nombre de la partición RAIZ cifrada
-LUKSNAME='LUKSGENTOO'
+############################
+##          RED           ##
+############################
+HOSTNAME='localhost'   ## Nombre del EQUIPO
+DOMAIN='local'         ## Nombre del dominio
 
-## Nombre del stage a descargar
+############################
+##      PARTICIONES       ##
+############################
+BOOT='/dev/sdXX'       ## Partición BOOT de 1GB
+RAIZ='/dev/sdXX'       ## Partición Raíz de más de 10GB
+SWAP='/dev/sdXX'       ## Partición SWAP
+JAULA='/mnt/gentoo'    ## Lugar donde montar el entorno chroot
+HDROOT='hdX,X'         ## Partición raíz / en nomenclatura hd0,1
+LUKSNAME='LUKSGENTOO'  ## Nombre de la partición RAIZ cifrada
+
+############################
+##        STAGE 3         ##
+############################
+SYSTEMD=true           ## Indica si se instalará con systemd el stage3
+
 STAGE3='stage3-amd64-20180828T214505Z.tar.xz'
 RUTASTAGE3="http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/$STAGE3"
 
 STAGE3SYSTEMD='stage3-amd64-systemd-20180827.tar.bz2'
 RUTASTAGE3SYSTEMD="http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-systemd/$STAGE3SYSTEMD"
 
+############################
+##         LOCALE         ##
+############################
 KEYMAP="es"
 LOCALIZATION='es_ES.UTF-8'
 ZONE='Europe/Madrid'
-
-
-
