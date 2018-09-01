@@ -3,7 +3,7 @@
 ###########################################
 
 ## Importo variables de configuración
-source "conf"
+source "config"
 
 ## Importo funciones auxiliares
 source "functions.sh"
@@ -48,7 +48,7 @@ montarJaula() {
 ##
 descomprimirXZ() {
     echo 'Descomprimiendo Stage3 en la jaula'
-     tar -Jcvf $1 $JAULA
+    tar -Jcvf $1 $JAULA
 }
 
 ##
