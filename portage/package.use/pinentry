@@ -1,0 +1,1 @@
+app-crypt/pinentry gtk ncurses qt5 caps -emacs gnome-keyring -static

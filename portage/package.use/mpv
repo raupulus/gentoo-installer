@@ -1,0 +1,1 @@
+media-video/mpv X alsa cdda cli dvd egl encode iconv jpeg lcms libass lua luajit opengl tools uchardet xv zlib zsh-completion -aqua archive bluray -coreaudio cplugins cuda -doc drm -dvb -gbm -jack -javascript -libav -libcaca -libmpv -openal -oss pulseaudio -raspberry-pi -rubberband samba -sdl -selinux -test -v4l vaapi vdpau -wayland

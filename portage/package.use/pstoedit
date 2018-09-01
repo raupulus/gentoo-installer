@@ -1,0 +1,1 @@
+media-gfx/pstoedit imagemagick -emf -flash plotutils -pptx -static-libs

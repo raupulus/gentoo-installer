@@ -1,0 +1,1 @@
+dev-lang/python gdbm ipv6 ncurses readline ssl threads xml -build -examples -hardened -libressl sqlite tk -wininst

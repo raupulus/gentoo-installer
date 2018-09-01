@@ -1,0 +1,1 @@
+media-libs/mlt ffmpeg gtk opengl python qt5 sdl sdl2 xml -compressed-lumas -debug -fftw -frei0r -jack kdenlive -libsamplerate -lua melt -rtaudio -ruby -xine

@@ -1,0 +1,1 @@
+x11-libs/libX11 -ipv6 -doc -static-libs -test abi_x86_64 abi_x86_32

@@ -1,0 +1,2 @@
+x11-libs/libva X drm opengl egl vdpau -wayland
+x11-libs/libva-vdpau-driver opengl -debug

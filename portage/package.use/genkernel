@@ -1,0 +1,2 @@
+>=sys-apps/util-linux-2.32-r4 static-libs
+>=sys-kernel/genkernel-3.5.3.3 firmware cryptsetup

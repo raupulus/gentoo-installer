@@ -1,0 +1,1 @@
+net-fs/samba acl cups fam ldap pam -system-mitkrb5 addc -addns -ads client -cluster gnutls gpg -iprint -quota -syslog -systemd winbind -zeroconf

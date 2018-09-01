@@ -1,0 +1,1 @@
+sys-libs/zlib minizip -static-libs abi_x86_64 abi_x86_32

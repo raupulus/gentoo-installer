@@ -1,0 +1,5 @@
+x11-wm/i3 -doc
+x11-misc/i3blocks
+x11-wm/i3-gaps
+x11-misc/i3lock
+x11-misc/i3status

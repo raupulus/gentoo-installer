@@ -1,0 +1,15 @@
+x11-drivers/nvidia-drivers X acpi driver kms multilib tools compat gtk3 -pax_kernel -static-libs uvm -wayland
+sys-power/bbswitch
+media-gfx/nvidia-texture-tools cg cuda glew -glut -openexr
+dev-util/nvidia-cuda-toolkit -debugger -doc -eclipse -profiler
+app-laptop/nvidiabl
+
+
+
+
+
+
+
+
+
+

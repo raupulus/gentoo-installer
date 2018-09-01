@@ -1,0 +1,2 @@
+app-admin/apache-tools ssl -libressl
+www-servers/apache gdbm ldap ssl suexec-caps -debug -doc -libressl -selinux -static suexec suexec-syslog threads

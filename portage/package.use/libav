@@ -1,0 +1,1 @@
+media-video/libav X aac alsa bzip2 encode gpl hardcoded-tables mp3 network sdl ssl theora tools truetype vorbis x264 xvid zlib -amr -bs2b -cdio -cpudetection -custom-cflags -debug -doc faac fdk -fontconfig -frei0r -gsm -ieee1394 -jack jpeg2k -libressl openssl opus -oss -pic pulseaudio -rtmp -schroedinger -speex -static-libs threads -twolame -v4l vaapi vdpau vpx wavpack webp x265

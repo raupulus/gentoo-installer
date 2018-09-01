@@ -1,0 +1,1 @@
+dev-libs/apr-util berkdb gdbm ldap -doc freetds mysql nss odbc openssl postgres sqlite -static-libs

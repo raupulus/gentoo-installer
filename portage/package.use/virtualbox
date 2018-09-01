@@ -1,0 +1,1 @@
+app-emulation/virtualbox alsa opengl pam python qt5 sdk udev -debug -doc -headless -java -libressl -lvm -pax_kernel pulseaudio -vboxwebsrv vnc

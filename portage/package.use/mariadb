@@ -1,0 +1,1 @@
+dev-db/mariadb backup pam perl server xml -bindist -client-libs -cracklib -debug -extraengine -galera -innodb-lz4 -innodb-lzo -innodb-snappy -jdbc -jemalloc -kerberos -latin1 -libressl -mroonga -numa odbc -oqgraph -profiling -selinux -sphinx -sst-mariabackup -sst-rsync -sst-xtrabackup -static -static-libs -systemd -systemtap -tcmalloc -test -tokudb -yassl

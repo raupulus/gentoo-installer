@@ -1,0 +1,1 @@
+media-libs/gegl cairo -ffmpeg jpeg png raw sdl svg -debug jpeg2k lensfun libav openexr umfpack

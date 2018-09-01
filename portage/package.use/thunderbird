@@ -1,0 +1,1 @@
+mail-client/thunderbird crypt dbus jemalloc ldap -minimal startup-notification wifi -bindist -custom-cflags -custom-optimization -debug gtk2 -hardened -lightning -mozdom -neon pulseaudio -rust -selinux -system-cairo -system-harfbuzz -system-icu -system-jpeg -system-libevent -system-libvpx -system-sqlite
