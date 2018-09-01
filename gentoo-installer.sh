@@ -1,13 +1,35 @@
-###########################################
-##             AUTOMATIZANDO             ##
-###########################################
+#!/usr/bin/env bash
+# -*- ENCODING: UTF-8 -*-
+##
+## @author     Raúl Caro Pastorino
+## @copyright  Copyright © 2018 Raúl Caro Pastorino
+## @license    https://wwww.gnu.org/licenses/gpl.txt
+## @email      dev@fryntiz.es
+## @web        https://fryntiz.es
+## @gitlab     https://gitlab.com/fryntiz
+## @github     https://github.com/fryntiz
+## @twitter    https://twitter.com/fryntiz
+##
+##             Guía de estilos aplicada:
+## @style      https://gitlab.com/fryntiz/bash-guide-style
 
+############################
+##     INSTRUCCIONES      ##
+############################
+## Genera una instalación del sistema operativo GNU/Linux Gentoo
+
+############################
+##     IMPORTACIONES      ##
+############################
 ## Importo variables de configuración
 source "config"
 
 ## Importo funciones auxiliares
 source "functions.sh"
 
+############################
+##       FUNCIONES        ##
+############################
 formatear() {
     mkfs.ext4 $BOOT
     mkfs.ext4 $RAIZ

@@ -1,12 +1,37 @@
-###########################################
-##             CONFIGURACIÓN             ##
-###########################################
+#!/usr/bin/env bash
+# -*- ENCODING: UTF-8 -*-
+##
+## @author     Raúl Caro Pastorino
+## @copyright  Copyright © 2018 Raúl Caro Pastorino
+## @license    https://wwww.gnu.org/licenses/gpl.txt
+## @email      dev@fryntiz.es
+## @web        https://fryntiz.es
+## @gitlab     https://gitlab.com/fryntiz
+## @github     https://github.com/fryntiz
+## @twitter    https://twitter.com/fryntiz
+##
+##             Guía de estilos aplicada:
+## @style      https://gitlab.com/fryntiz/bash-guide-style
 
-WORKSCRIPT=$PWD  ## Directorio principal del script
-USER=$(whoami)   ## Usuario que ejecuta el script
-VERSION='0.0.1'  ## Primera versión del script
-LOGERROR='/tmp/chrooterrores.log'  ## Archivo donde almacenar errores
-SYSTEMD=true
+############################
+##     INSTRUCCIONES      ##
+############################
+## Archivo de configuración con las constantes utilizadas durante el
+## proceso de instalación y configuración de GNU/Linux Gentoo
+
+############################
+##     IMPORTACIONES      ##
+############################
+
+############################
+##       FUNCIONES        ##
+############################
+
+WORKSCRIPT=$PWD       ## Directorio principal del script
+USER=$(whoami)        ## Usuario que ejecuta el script
+VERSION='0.0.1'       ## Primera versión del script
+LOGERROR='/tmp/installerErrors.log'  ## Archivo donde almacenar errores
+SYSTEMD=true          ## Indica si se instalará con systemd
 HOSTNAME='localhost'  ## Nombre del EQUIPO
 DOMAIN='local'        ## Nombre del dominio
 USUARIO='usuario'     ## Nombre del usuario a crear
