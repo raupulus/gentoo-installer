@@ -8,14 +8,14 @@ VERSION='0.0.1'  ## Primera versión del script
 LOGERROR='/tmp/chrooterrores.log'  ## Archivo donde almacenar errores
 SYSTEMD=true
 HOSTNAME='localhost'  ## Nombre del EQUIPO
-DOMAIN='local'  ## Nombre del dominio
-USUARIO='usuario'  ## Nombre del usuario a crear
+DOMAIN='local'        ## Nombre del dominio
+USUARIO='usuario'     ## Nombre del usuario a crear
 
-BOOT='/dev/sdXX'  ## Partición BOOT de 1GB
-RAIZ='/dev/sdXX'  ## Partición Raíz de más de 10GB
-SWAP='/dev/sdXX'  ## Partición SWAP
+BOOT='/dev/sdXX'      ## Partición BOOT de 1GB
+RAIZ='/dev/sdXX'      ## Partición Raíz de más de 10GB
+SWAP='/dev/sdXX'      ## Partición SWAP
 JAULA='/mnt/gentoo'
-HDROOT='hdX,X' ## Partición raíz / en nomenclatura hd0,1
+HDROOT='hdX,X'        ## Partición raíz / en nomenclatura hd0,1
 
 ## Nombre de la partición RAIZ cifrada
 LUKSNAME='LUKSGENTOO'
