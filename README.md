@@ -15,3 +15,30 @@ Por supuesto si que correjiré fallos e implemetaré mejoras siempre que
 sea posible y viable para el objetivo actual.
 
 Usa este repositorio bajo tu propia responsabilidad.
+
+## Modo de uso
+
+Clonamos el repositorio dentro del live o medio de instalación
+
+```bash
+git clone https://gitlab.com/fryntiz/gentoo-installer.git
+```
+
+Editamos las variables de configuración en el archivo **config**
+
+```bash
+nano config
+```
+
+La instalación se lleva a cabo simplemente ejecutando:
+
+```bash
+./gentoo-installer.sh
+```
+
+Una vez el script anterior nos deja dentro del entorno enjaulado chroot
+ejecutaremos el segundo script para terminar de personalizar el sistema:
+
+```bash
+cd / && ./chroot.sh
+```
